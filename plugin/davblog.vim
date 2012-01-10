@@ -7,6 +7,8 @@ if filereadable($VIMRUNTIME."/plugin/davblog.py")
   pyfile $VIMRUNTIME/plugin/davblog.py
 elseif filereadable($HOME."/.vim/plugin/davblog.py")
   pyfile $HOME/.vim/plugin/davblog.py
+elseif filereadable($HOME."/.vim/bundle/davblog/davblog.py")
+  pyfile $HOME/.vim/bundle/davblog/davblog.py
 else
   call confirm('Unable to find davblog.vim', 'OK')
   finish

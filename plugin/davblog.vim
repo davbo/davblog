@@ -3,7 +3,14 @@
 "
 "
 
-pyfile davblog.py
+if filereadable($VIMRUNTIME."/plugin/davblog.py")
+  pyfile $VIMRUNTIME/plugin/davblog.py
+elseif filereadable($HOME."/.vim/plugin/davblog.py")
+  pyfile $HOME/.vim/plugin/davblog.py
+else
+  call confirm('Unable to find davblog.vim', 'OK')
+  finish
+endif
 if has('python')
     command! DavblogBrowse python davblog.davblog_browse()
 endif

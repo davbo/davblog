@@ -7,7 +7,7 @@ if filereadable($VIMRUNTIME."/plugin/davblog.py")
   pyfile $VIMRUNTIME/plugin/davblog.py
 elseif filereadable($HOME."/.vim/plugin/davblog.py")
   pyfile $HOME/.vim/plugin/davblog.py
-if filereadable($VIMRUNTIME."/.vim/bundle/davblog/plugin/davblog.py")
+elseif filereadable($VIMRUNTIME."/.vim/bundle/davblog/plugin/davblog.py")
   pyfile $VIMRUNTIME/bundle/davblog/plugin/davblog.py
 elseif filereadable($HOME."/.vim/bundle/davblog/plugin/davblog.py")
   pyfile $HOME/.vim/bundle/davblog/plugin/davblog.py
